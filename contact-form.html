@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Pattern Attribute</title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        .container{
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+            border-radius: 5px;
+            border: 2px solid lightgray;
+            width: 300px;
+        }
+        
+        label{
+            font-weight: bold;
+            color: rgb(44, 44, 44);
+        }
+        button{
+            width: 300px;
+            margin-top: 15px;
+            background-color: rgb(2, 165, 2);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid rgb(1, 139, 1);
+        }
+        button:hover{
+            cursor: pointer;
+            color: rgb(2, 165, 2);
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="fname">Full Name:</label>
+            <br />
+            <input type="text" name="fname" id="fname" placeholder="Enter your name"  pattern="[A-Za-z ]+"
+            title="Name should only contain letters and spaces(3-30)">
+            <br />
+            <br />
+            <label for="email">Email Address:</label>
+            <br />
+            <input type="email" name="email" id="email" placeholder="example@email.com" required>
+            <br />
+            <br />
+            <label for="phone">Phone Number:</label>
+            <br />
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+            title="phone number should look like 123-456-7890">
+            <br />
+            <br />
+            <label for="message">Your Message:</label>
+            <br />
+            <textarea name="message" id="message" placeholder="Write your message here..." cols="40" rows="4" required></textarea>
+            <br />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
